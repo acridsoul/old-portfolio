@@ -3,7 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const pageTitle = "Home Page";
+const pageTitle = "The Crib";
 ---
 
 <html lang="en">
@@ -17,6 +17,7 @@ const pageTitle = "Home Page";
   <body>
 	<Header />
     <h1>{pageTitle}</h1>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
 	<Footer />
 	<script>
 		import "../scripts/menu.js";

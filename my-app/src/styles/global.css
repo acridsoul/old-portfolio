@@ -1,89 +1,115 @@
 @font-face {
-  font-family: Gothic War;
-  src: url('/public/fonts/Gothic\ War.otf') format('opentype');
+font-family: Gothic War;
+src: url('/public/fonts/Gothic\ War.otf') format('opentype');
 }
-html {
-    background-color: #000000;
-    font-family: sans-serif;
-    color: aliceblue;
-  }
-  
-  body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-  }
-  
-  /* nav styles */
-  .hamburger {
-    padding-right: 20px;
-    cursor: pointer;
-  }
-  
-  .hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
+
+@font-face {
+font-family: Mirage;
+src: url('/public/fonts/Mirage\ final.ttf') format('truetype');
+}
+
+@font-face {
+font-family: Death;
+src: url('/public/fonts/Death.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Digital Clock;
+  src: url('/public/fonts/digital-7.ttf') format('truetype');
   }
 
-  /* .nav-links {
-    width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
-    margin: 0;
-  } */
-  
-  .nav-links a {
+html {
+  background-color: #000000;
+  font-family: sans-serif;
+  color: aliceblue;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+/* nav styles */
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
+}
+
+/* .nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+} */
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: rgb(240, 7, 7);
+  font-size: 1.5rem;
+  font-family: 'Mirage';
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #36e414;
+}
+
+.expanded {
+  display: unset;
+}
+
+/* clock */
+
+.clock {
+  color: #17D4FE;
+  font-size: 40px;
+  font-family: 'Digital Clock';
+  letter-spacing: 7px;
+
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em;
     display: block;
-    text-align: center;
-    padding: 10px 0;
-    text-decoration: none;
-    color: rgb(240, 7, 7);
-    font-size: 2.2rem;
-    font-family: 'Gothic War';
-    font-weight: bold;
-    text-transform: uppercase;
+    position: static;
+    width: auto;
+    background: none;
   }
-  
-  .nav-links a:hover,
-  .nav-links a:focus {
-    background-color: #ff9776;
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
   }
-  
-  .expanded {
-    display: unset;
-  }
-  
-  @media screen and (min-width: 636px) {
-    .nav-links {
-      margin-left: 5em;
-      display: block;
-      position: static;
-      width: auto;
-      background: none;
+
+  .hamburger {
+      display: none;
     }
-  
-    .nav-links a {
-      display: inline-block;
-      padding: 15px 20px;
-    }
-  
-    .hamburger {
-        display: none;
-      }
-  }
+}
