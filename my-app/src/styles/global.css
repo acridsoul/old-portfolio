@@ -23,7 +23,7 @@ src: url('/public/fonts/Death.ttf') format('truetype');
 html {
   background-color: #000000;
   font-family: DynaPuff;
-  color: aliceblue;
+  color: #0ae61d;
 }
 
 body {
