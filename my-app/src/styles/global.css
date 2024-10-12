@@ -130,6 +130,11 @@ h1 {
   z-index: 9999;
 }
 
+#loading-screen h1 {
+  color: red;
+  font-family:'Mirage' ;
+}
+
 /* Loader Styles */
 /* HTML: <div class="loader"></div> */
 .loader {
