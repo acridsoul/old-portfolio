@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
 @font-face {
 font-family: Gothic War;
 src: url('/public/fonts/Gothic\ War.otf') format('opentype');
@@ -20,7 +22,7 @@ src: url('/public/fonts/Death.ttf') format('truetype');
 
 html {
   background-color: #000000;
-  font-family: sans-serif;
+  font-family: DynaPuff;
   color: aliceblue;
 }
 
@@ -89,10 +91,11 @@ h1 {
 
 .clock {
   color: #17D4FE;
-  font-size: 40px;
+  font-size: 35px;
   font-family: 'Digital Clock';
   letter-spacing: 2px;
-  font-weight: 300;
+  font-weight: 500;
+  margin-top: -20px;
 }
 
 @media screen and (min-width: 636px) {
