@@ -28,8 +28,8 @@ html {
 
 body {
   margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
+  /* width: 100%; */
+  /* max-width: 80ch; */
   padding: 1rem;
   line-height: 1.5;
 }
@@ -57,14 +57,14 @@ h1 {
   background-color: #ff9776;
 }
 
-/* .nav-links {
+.nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
   background-color: #ff9776;
   display: none;
   margin: 0;
-} */
+}
 
 .nav-links a {
   display: block;
@@ -115,4 +115,43 @@ h1 {
   .hamburger {
       display: none;
     }
+}
+
+/* Loading Screen Styles */
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-color: #000000; /* Black background */
+  display: flex;
+  justify-content: center; /* Horizontally center the loader */
+  align-items: center; /* Vertically center the loader */
+  z-index: 9999;
+}
+
+/* Loader Styles */
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: inline-flex;
+  gap: 10px;
+  /* width: 170px; */
+}
+.loader:before,
+.loader:after {
+  content: "";
+  height: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side,#000 95%,#0000) 50%/8px 8px no-repeat
+    #fff;
+  aspect-ratio: 1;
+  animation: l10 1.5s infinite alternate;
+}
+.loader:after {
+  --s:-1;
+}
+@keyframes l10 {
+  0% ,20% {transform:scaleX(var(--s,1)) rotate(0deg) ;clip-path:inset(0)}
+  60%,100%{transform:scaleX(var(--s,1)) rotate(30deg);clip-path:inset(40% 0 0)}
 }

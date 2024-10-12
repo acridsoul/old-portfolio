@@ -15,13 +15,24 @@ const pageTitle = "The Crib";
     <title>{pageTitle}</title>
   </head>
   <body>
-	<Header />
-    <h2>Time in Nairobi,Kenya</h2>
-    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-	<Footer />
-	<script>
-		import "../scripts/menu.js";
-	</script>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Main content, hidden initially -->
+    <div id="main-content" style="display: none;">
+      <Header />
+      <h2>Time in Nairobi, Kenya</h2>
+      <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+      <Footer />
+    </div>
+
+    <script>
+      // Import external JavaScript (menu.js) for functionality
+      import "../scripts/menu.js";
+    </script>
+
   </body>
 </html>
-
