@@ -124,6 +124,7 @@ h1 {
   height: 100vh; /* Full viewport height */
   background-color: #000000; /* Black background */
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Horizontally center the loader */
   align-items: center; /* Vertically center the loader */
   z-index: 9999;
