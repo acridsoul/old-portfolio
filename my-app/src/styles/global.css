@@ -5,7 +5,7 @@ src: url('/public/fonts/Gothic\ War.otf') format('opentype');
 
 @font-face {
 font-family: Mirage;
-src: url('/public/fonts/Mirage\ final.ttf') format('truetype');
+src: url('/public/fonts/Mirage.ttf') format('truetype');
 }
 
 @font-face {
