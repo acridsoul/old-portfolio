@@ -1,6 +1,11 @@
+@font-face {
+  font-family: Gothic War;
+  src: url('/public/fonts/Gothic\ War.otf') format('opentype');
+}
 html {
-    background-color: #f1f5f9;
+    background-color: #000000;
     font-family: sans-serif;
+    color: aliceblue;
   }
   
   body {
@@ -34,21 +39,23 @@ html {
     background-color: #ff9776;
   }
 
-  .nav-links {
+  /* .nav-links {
     width: 100%;
     top: 5rem;
     left: 48px;
     background-color: #ff9776;
     display: none;
     margin: 0;
-  }
+  } */
   
   .nav-links a {
     display: block;
     text-align: center;
     padding: 10px 0;
     text-decoration: none;
-    font-size: 1.2rem;
+    color: rgb(240, 7, 7);
+    font-size: 2.2rem;
+    font-family: 'Gothic War';
     font-weight: bold;
     text-transform: uppercase;
   }
