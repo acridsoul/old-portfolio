@@ -13,7 +13,6 @@ typeWriter()
 
 // js code for the clock
 setInterval(myClock, 10);
-
 function myClock() {
   const date = new Date();
   document.getElementById("digital-clock").innerHTML = date.toLocaleTimeString();
