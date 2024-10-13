@@ -38,6 +38,11 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  height: 30px;
+}
+
+
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
@@ -89,7 +94,7 @@ h1 {
 
 /* clock */
 
-.clock {
+#digital-clock {
   color: #17D4FE;
   font-size: 35px;
   font-family: 'Digital Clock';

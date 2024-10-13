@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import Body from '../components/Body.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
@@ -17,16 +18,17 @@ const pageTitle = "The Crib";
   <body>
 
     <!-- Loading Screen -->
-    <div id="loading-screen">
+    <!-- <div id="loading-screen">
       <h1>Wait...</h1> <br>
       <div class="loader"></div>
-    </div>
+    </div> -->
 
     <!-- Main content, hidden initially -->
-    <div id="main-content" style="display: none;">
+    <!-- <div id="main-content" style="display: none;"> -->
       <Header />
+      <Body />
       <h2>Time in Nairobi, Kenya</h2>
-      <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+      <div id="digital-clock"></div>
       <Footer />
     </div>
 
