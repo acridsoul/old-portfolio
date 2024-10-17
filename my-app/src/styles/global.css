@@ -2,28 +2,32 @@
 
 @font-face {
 font-family: Gothic War;
-src: url('/public/fonts/Gothic\ War.otf') format('opentype');
+src: url('/src/fonts/ War.otf') format('opentype');
 }
 
 @font-face {
 font-family: Mirage;
-src: url('/public/fonts/Mirage.ttf') format('truetype');
+src: url('/src/fonts/Mirage.ttf') format('truetype');
 }
 
 @font-face {
 font-family: Death;
-src: url('/public/fonts/Death.ttf') format('truetype');
+src: url('/src/fonts/Death.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Digital Clock;
-  src: url('/public/fonts/digital-7.ttf') format('truetype');
+  src: url('/src/fonts/digital-7.ttf') format('truetype');
   }
 
 html {
   background-color: #000000;
   font-family: DynaPuff;
   color: #0ae61d;
+}
+
+#pikachu {
+  height: 100px;
 }
 
 body {
@@ -165,4 +169,126 @@ h1 {
 @keyframes l10 {
   0% ,20% {transform:scaleX(var(--s,1)) rotate(0deg) ;clip-path:inset(0)}
   60%,100%{transform:scaleX(var(--s,1)) rotate(30deg);clip-path:inset(40% 0 0)}
+}
+
+
+
+/* ------------------- CSS FOR PROJECT TAB ------------------- */
+
+/* Gothic-themed CSS for file stack */
+
+.file-stack {
+  width: 100%;
+  max-width: 600px;
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 1px solid #070606;
+}
+
+.file-stack a {
+  text-decoration: none;
+}
+
+
+.folder {
+  border-bottom: 1px solid #070606;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.folder:last-child {
+  border-bottom: none;
+}
+
+.folder .label {
+  padding: 20px;
+  background-color: #000000;
+  color: #c0c0c0;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+}
+
+.folder .label:hover {
+  background-color: #000000;
+}
+
+.folder .label::before {
+  content: '♰';
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.folder .label::after {
+  content: '▼';
+  margin-left: auto;
+  color: red;
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.folder.active .label::after {
+  transform: rotate(-180deg);
+}
+
+.folder .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #000000;
+}
+
+.folder.active .content {
+  max-height: 500px;
+}
+
+.folder .content-inner {
+  padding: 20px;
+  border-top: 1px solid #000000;
+}
+
+.folder h3 {
+  color: #a0a0a0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.folder h3:hover {
+  color: #4ed410;
+}
+
+.folder p {
+  color: #808080;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.folder img {
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #4a4a4a;
+}
+
+@media (max-width: 600px) {
+  .file-stack {
+    max-width: 100%;
+  }
+  
+  .folder .label {
+    padding: 15px;
+    font-size: 0.8em;
+  }
+  
+  .folder .content-inner {
+    padding: 15px;
+  }
 }
