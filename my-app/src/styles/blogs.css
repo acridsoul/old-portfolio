@@ -1,0 +1,259 @@
+/* Gothic-themed CSS for blog grid layout - Revamped */
+:root {
+    --background-color: #000000;
+    --text-color: #c0c0c0;
+    --accent-color: #8b0000; /* Deep red accent */
+    --card-background: #000000;
+    --header-background: #000000;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Didot', 'Times New Roman', serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--header-background);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: var(--accent-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 8px rgba(139, 0, 0, 0.8);
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .blog-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    /* box-shadow: 0 0 15px rgba(139, 0, 0, 0.3); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(139, 0, 0, 0.5);
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(50%) contrast(120%);
+    transition: filter 0.3s ease;
+  }
+  
+  .blog-card:hover img {
+    filter: grayscale(0%) contrast(100%);
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .blog-card h2 {
+    color: var(--accent-color);
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .blog-card:hover h2 {
+    color: #ff0000;
+  }
+  
+  .excerpt {
+    color: #a0a0a0;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  
+  .post-meta {
+    font-size: 0.8em;
+    color: #808080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .read-time {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 3px 8px;
+    border-radius: 12px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-background);
+    border-top: 1px solid #333;
+    margin-top: 40px;
+  }
+  
+  /* Gothic-inspired decorative element */
+  .blog-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .blog-card:hover::before {
+    opacity: 1;
+  }
+  
+
+/* Add this to your existing CSS */
+
+.blog-card {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .read-more {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    background-color: #a00000;
+  }
+  
+  .modal-content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .modal-content h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+  }
+  
+  .modal-content h3 {
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    margin-bottom: 15px;
+  }
+  
+  .modal-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close-modal:hover {
+    color: var(--accent-color);
+  }
+
+
+
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    .blog-card h2 {
+      font-size: 1.2em;
+    }
+    .post-meta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .post-meta > * {
+      margin-bottom: 5px;
+    }
+  }

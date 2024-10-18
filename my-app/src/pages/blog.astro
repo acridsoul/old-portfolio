@@ -1,7 +1,9 @@
 ---
 import Header from '../components/Header.astro';
+import Blogs from '../components/Blogs.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import '../styles/blogs.css';
 
 ---
 <html lang="en">
@@ -15,13 +17,10 @@ import '../styles/global.css';
 <body>
     <Header />
     <h1>Welcome to my blogs page</h1>
-    <ul>
-        <li><a href="/posts/post-1">Post 1</a></li>
-        <li><a href="/posts/post-2">Post 2</a></li>
-    </ul>
+    <Blogs />
     <Footer />
     <script>
-      import "../scripts/menu.js";
+      import "../scripts/blogs.js";
     </script>
 </body>
 </html>

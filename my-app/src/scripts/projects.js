@@ -10,8 +10,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   });
-
-// Javascript to open links in new pages
-document.querySelectorAll('a').forEach(function(link) {
-    link.setAttribute('target', '_blank');
-});
