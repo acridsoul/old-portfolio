@@ -24,9 +24,9 @@ function myClock() {
 }
 
 
-// document.querySelector('.hamburger').addEventListener('click', () => {
-//     document.querySelector('.nav-links').classList.toggle('expanded');
-//   });
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('expanded');
+  });
 
 
 // Show the main content after 4 seconds and hide the loading screen
