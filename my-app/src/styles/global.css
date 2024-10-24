@@ -26,9 +26,7 @@ html {
   color: #0ae61d;
 }
 
-#pikachu {
-  height: 100px;
-}
+
 
 body {
   margin: 0 auto;
@@ -66,18 +64,21 @@ h1 {
   background-color: #ff9776;
 }
 
+/* Mobile-first styles */
 .nav-links {
   width: 100%;
   top: 5rem;
-  left: 48px;
   background-color: #ff9776;
   display: none;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-links a {
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
   padding: 10px 0;
   text-decoration: none;
   color: rgb(240, 7, 7);
@@ -85,6 +86,27 @@ h1 {
   font-family: 'Mirage';
   font-weight: bold;
   text-transform: uppercase;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 636px) {
+  .nav-links {
+      display: flex; /* Changed to flex for better alignment */
+      justify-content: center; /* Center the links horizontally */
+      position: static;
+      width: 100%; /* Full width to allow proper centering */
+      background: none;
+      margin: 0; /* Remove margin that was causing offset */
+  }
+
+  .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+  }
+
+  .hamburger {
+      display: none;
+  }
 }
 
 .nav-links a:hover,
@@ -107,24 +129,6 @@ h1 {
   margin-top: -20px;
 }
 
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-
-  .hamburger {
-      display: none;
-    }
-}
 
 /* Loading Screen Styles */
 #loading-screen {
