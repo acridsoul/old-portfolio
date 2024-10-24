@@ -197,7 +197,7 @@ h1 {
 
 
 .folder {
-  border-bottom: 1px solid #070606;
+  border-bottom: 1px dotted #070606;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -221,6 +221,7 @@ h1 {
 
 .folder .label:hover {
   background-color: #000000;
+  color: #0ae61d;
 }
 
 .folder .label::before {
@@ -239,6 +240,7 @@ h1 {
 
 .folder.active .label::after {
   transform: rotate(-180deg);
+  color: #0ae61d;
 }
 
 .folder .content {
