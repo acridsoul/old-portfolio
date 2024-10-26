@@ -327,6 +327,22 @@ h1 {
   border: 1px solid #4a4a4a;
 }
 
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.project-icon {
+  color: #808080;
+  font-size: 1.6em;
+  transition: color 0.2s ease;
+}
+
+.project-icon:hover {
+  color: #0ae61d;
+}
+
 @media (max-width: 600px) {
   .file-stack {
     max-width: 100%;
