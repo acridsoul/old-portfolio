@@ -2,22 +2,22 @@
 
 @font-face {
 font-family: Gothic War;
-src: url('/public/fonts/ War.otf') format('opentype');
+src: url('/fonts/ War.otf') format('opentype');
 }
 
 @font-face {
 font-family: Mirage;
-src: url('/public/fonts/Mirage.ttf') format('truetype');
+src: url('/fonts/Mirage.ttf') format('truetype');
 }
 
 @font-face {
 font-family: Death;
-src: url('/public/fonts/Death.ttf') format('truetype');
+src: url('/fonts/Death.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Digital Clock;
-  src: url('/public/fonts/digital-7.ttf') format('truetype');
+  src: url('/fonts/digital-7.ttf') format('truetype');
   }
 
 html {
