@@ -25,11 +25,8 @@ src: url('/fonts/Death.ttf') format('truetype');
 html {
   background-color: #000000;
   font-family: "Iceland",cursive;
-  color: #fff;
   font-weight: 500;
-  font-size: 1.3rem;
 }
-
 
 
 body {
@@ -68,104 +65,9 @@ h1 {
   background-color: #ff9776;
 }
 
-/* Desktop styles (base styles) */
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-  background: none;
-  list-style: none;
-}
 
-:root {
-  /* Preload the image */
-  background-image: url('../images/frame.png');
-  background-image: none;
-  
-  /* Store the path as a CSS variable */
-  --frame-image: url('../images/frame.png');
-}
 
-.nav-links .frame-container {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  background-image: var(--frame-image);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.nav-links a {
-  position: absolute;
-  top: 25%;
-  bottom: 20%;
-  left: 15%;
-  right: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: rgb(240, 7, 7);
-  font-size: 0.9rem;
-  font-family: 'Mirage';
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-  white-space: nowrap;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  color: #36e414;
-}
-
-.hamburger{
-  display: none;
-}
-
-/* Mobile styles */
-@media screen and (max-width: 635px) {
-  .nav-links {
-      flex-direction: column;
-      top: 5rem;
-      display: none; /* Hidden by default for mobile menu */
-  }
-
-  .nav-links .frame-container {
-      width: 200px;
-      height: 120px;
-      margin: -50px auto;
-  }
-
-  .nav-links a {
-      font-size: 1rem;
-  }
-
-  .hamburger {
-      display: block; /* Show hamburger on mobile */
-  }
-}
-
-/* Hover effects */
-.nav-links a:hover,
-.nav-links a:focus {
-  color: #36e414;
-}
-
-/* Optional: Smooth transition for hover effect */
-.nav-links a {
-  transition: all 0.3s ease;
-}
-.expanded {
-  display: unset;
-}
-
-/* clock */
+/*----------------------------- Clock Styles -------------------------------*/
 
 #digital-clock {
   color: #17D4FE;
@@ -173,11 +75,13 @@ h1 {
   font-family: 'Digital Clock';
   letter-spacing: 2px;
   font-weight: 500;
-  margin-top: -40px;
+  margin-top: -20px;
 }
 
 
-/* Loading Screen Styles */
+/*--------------------------- Loading Screen Styles -------------------------*/
+
+
 #loading-screen {
   position: fixed;
   width: 100%;

@@ -1,5 +1,4 @@
 ---
-import Header from '../components/Header.astro';
 import Projects from '../components/Projects.astro';
 import '../styles/global.css';
 
@@ -39,11 +38,11 @@ const skillColor = "navy";
         }
     </style>
   </head>
-  <body>
-    <Header /> 
-    <h1>{pageTitle}</h1>
+  <body >
+    <div class="text-white text-xl ml-28">
+      <p><a href="/"><i class="fas fa-arrow-left text-custom-green hover:text-white"> Home</i></a></p>
+      <h1>{pageTitle}</h1>
     <ul>
-        <li>I am  {identity.firstName}.</li>
         <li>I live in {identity.country}. and I am a student studying {identity.course}</li>
     </ul>
     <h2>Skills</h2>
@@ -57,6 +56,7 @@ const skillColor = "navy";
     <h2>Here are my Github Projects:</h2>
     <Projects />
     <p>This site will update as I add stuff, so keep checking back</p>
+    </div>  
     <script>
       // import "../scripts/menu.js";
       import "../scripts/projects.js";
