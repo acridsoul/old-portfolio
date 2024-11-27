@@ -30,39 +30,108 @@ const skillColor = "white";
     <meta name="generator" content={Astro.generator} >
     <title>{pageTitle}</title>
     <style define:vars={{skillColor}}>
-        h1 {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        .skill {
-            color: var(--skillColor);
-        }
-        .categories-container {
-            display: flex;
-            flex-wrap: wrap; /* Wraps items if they don't fit in one row */
-            gap: 20px; /* Space between items */
-            justify-content: space-between; /* Adjusts spacing between categories */
-        }
+        /* Base styles for larger screens */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
 
-        .category {
-            flex: 1; /* Each category takes an equal amount of space */
-            min-width: 250px; /* Ensures categories don't shrink too small */
-          }
+.skill {
+    color: var(--skillColor);
+}
 
-        .category h2 {
-            font-size: 1.2rem;
-            margin-bottom: -14px;
-            margin-left: 25px;
-        }
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
 
-        .category ul {
-            list-style: none;
-        }
+.category {
+    flex: 1;
+    min-width: 250px;
+}
+
+.category h2 {
+    font-size: 1.2rem;
+    margin-bottom: -14px;
+    margin-left: 25px;
+}
+
+.category ul {
+    list-style: none;
+}
+
+/* Media query for small screens (max-width: 640px) */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+
+    .categories-container {
+        flex-direction: column; /* Stack categories vertically on small screens */
+        gap: 10px; /* Reduce gap between categories */
+    }
+
+    .category {
+        min-width: auto; /* Remove the min-width restriction on categories */
+        width: 100%; /* Allow categories to take full width */
+    }
+
+    .category h2 {
+        font-size: 1rem; /* Adjust font size for category titles */
+        margin-left: 10px; /* Reduce left margin */
+    }
+
+    ul {
+        padding-left: 20px; /* Adjust padding for better spacing */
+    }
+
+    .text-xl {
+        font-size: 1rem; /* Reduce text size for better readability */
+    }
+}
+
+/* Media query for medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem; /* Slightly larger font size for tablets */
+    }
+
+    .categories-container {
+        flex-direction: column; /* Stack categories vertically */
+        gap: 15px; /* Moderate gap between categories */
+    }
+
+    .category h2 {
+        font-size: 1.1rem; /* Adjust category title font size */
+    }
+}
+
+/* Media query for large screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 1.8rem; /* Adjust font size for larger tablets or small laptops */
+    }
+
+    .categories-container {
+        flex-direction: row; /* Keep categories in a row */
+        gap: 20px; /* Standard gap between categories */
+    }
+
+    .category {
+        flex: 1; /* Ensure each category takes equal space */
+    }
+
+    .category h2 {
+        font-size: 1.2rem; /* Adjust font size for category titles */
+    }
+}
 
     </style>
   </head>
   <body >
-    <div class="text-white text-xl ml-28 font-iceland">
+    <div class="text-white text-xl ml-10 font-iceland">
       <p><a href="/"><i class="fas fa-arrow-left text-custom-green hover:text-white"> Home</i></a></p>
       <h1 class="text-purple-500">{pageTitle}</h1>
     <ul>
