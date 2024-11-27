@@ -1,7 +1,5 @@
 import { fairyDustCursor } from "cursor-effects";
 
-
-
 window.addEventListener("load", () => {
   new fairyDustCursor(
     {
@@ -19,11 +17,6 @@ function myClock() {
 }
 
 
-document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('expanded');
-  });
-
-
 // Show the main content after 4 seconds and hide the loading screen
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
@@ -33,3 +26,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// JavaScript for Project tab
+document.addEventListener('DOMContentLoaded', () => {
+  const folders = document.querySelectorAll('.folder');
+
+  folders.forEach(folder => {
+      const label = folder.querySelector('.label');
+      
+      label.addEventListener('click', () => {
+          folder.classList.toggle('active');
+      });
+  });
+});
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('expanded');
+});
