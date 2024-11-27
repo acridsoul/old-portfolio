@@ -173,7 +173,7 @@ h1 {
   font-family: 'Digital Clock';
   letter-spacing: 2px;
   font-weight: 500;
-  margin-top: -20px;
+  margin-top: -40px;
 }
 
 
@@ -221,7 +221,6 @@ h1 {
   0% ,20% {transform:scaleX(var(--s,1)) rotate(0deg) ;clip-path:inset(0)}
   60%,100%{transform:scaleX(var(--s,1)) rotate(30deg);clip-path:inset(40% 0 0)}
 }
-
 
 
 /* ------------------- CSS FOR PROJECT TAB ------------------- */
