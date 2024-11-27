@@ -12,6 +12,9 @@ export default {
 			fontFamily: {
 				iceland: ['Iceland', 'sans-serif']
 			},
+			backgroundImage: {
+				'gradient-rainbow': 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
+			},
 		},
 	},
 	plugins: [],
