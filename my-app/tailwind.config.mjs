@@ -9,6 +9,9 @@ export default {
 			colors: {
 				'custom-green': '#36e414',
 			},
+			fontFamily: {
+				iceland: ['Iceland', 'sans-serif']
+			},
 		},
 	},
 	plugins: [],

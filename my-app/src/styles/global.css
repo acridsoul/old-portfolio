@@ -24,8 +24,6 @@ src: url('/fonts/Death.ttf') format('truetype');
 
 html {
   background-color: #000000;
-  font-family: "Iceland";
-  font-weight: 500;
 }
 
 
@@ -185,7 +183,7 @@ h1 {
   content: '▼';
   margin-left: auto;
   color: red;
-  font-size: 0.8em;
+  font-size: 0.6em;
   transition: transform 0.3s ease;
 }
 
