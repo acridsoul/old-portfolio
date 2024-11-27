@@ -5,17 +5,19 @@ import '../styles/global.css';
 const pageTitle = "About Me";
 
 const identity = {
-  firstName: "Austine",
-  country: "Kenya",
+  firstName: "xxxxxxxx",
+  country: "Web",
   occupation: "Security Researcher",
 //   hobbies: ["Reading Books", "Dancing", "Making Content"],
-  course: ["IT"]
+  course: ["Computer Science"]
 };
 
-const skills = ["JavaScript", "React", "Python", "Making Content"];
-// const interests = ["InfoSec"]
-
-const skillColor = "navy";
+const languages = ["JavaScript / Typescript","Python","Lua","Java (Scanty)"];
+const frameworks = ["React","Astro","Flask"];
+const interests = ["InfoSec","Reading Books", "Malware Research","Dubstep"]
+const oses = ["Archlinux (Hyprland)","Ubuntu 24.04 (Hyprland)", "Windows 11 (eww)"]
+const games = ["Apex Legends","Call of Duty","Mr Mine (Very Cool Game)","Football Manager","GTA"]
+const skillColor = "white";
 ---
 
 <html lang="en">
@@ -29,32 +31,83 @@ const skillColor = "navy";
     <title>{pageTitle}</title>
     <style define:vars={{skillColor}}>
         h1 {
-            color: purple;
             font-size: 2rem;
             font-weight: bold;
         }
         .skill {
             color: var(--skillColor);
-            font-weight: bold;
         }
+        .categories-container {
+            display: flex;
+            flex-wrap: wrap; /* Wraps items if they don't fit in one row */
+            gap: 20px; /* Space between items */
+            justify-content: space-between; /* Adjusts spacing between categories */
+        }
+
+        .category {
+            flex: 1; /* Each category takes an equal amount of space */
+            min-width: 250px; /* Ensures categories don't shrink too small */
+          }
+
+        .category h2 {
+            font-size: 1.2rem;
+            margin-bottom: -14px;
+            margin-left: 25px;
+        }
+
+        .category ul {
+            list-style: none;
+        }
+
     </style>
   </head>
   <body >
     <div class="text-white text-xl ml-28 font-iceland">
       <p><a href="/"><i class="fas fa-arrow-left text-custom-green hover:text-white"> Home</i></a></p>
-      <h1>{pageTitle}</h1>
+      <h1 class="text-purple-500">{pageTitle}</h1>
     <ul>
-        <li>I live in {identity.country}. and I am a student studying {identity.course}</li>
+        <li>I live on the {identity.country} basically.</li>
+        <li>I broke computers alot as a kid and that's when I realized my passion</li>
+        <li>Interacting with randos on the web is kinda the norm for me</li>
+        <li>I hate big tech companies with my whole dark soul</li>
+        <li>I love networking and the world of CyberSecurity</li>
     </ul>
-    <h2>Skills</h2>
-    <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-    <!-- <h2>Interests</h2>
-    <ul>
-        {interests.map((interest) => <li>{interest}</li>)}
-    </ul> -->
-    <h2>Here are my Github Projects:</h2>
+
+    <div class="categories-container">
+      <div class="category">
+          <h2 class="text-purple-500">Languages & Tools</h2>
+          <ul>
+              {languages.map((language) => <li>{language}</li>)}
+          </ul>
+      </div>
+      <div class="category">
+          <h2 class="text-purple-500">Web Frameworks</h2>
+          <ul>
+              {frameworks.map((framework) => <li>{framework}</li>)}
+          </ul>
+      </div>
+      <div class="category">
+          <h2 class="text-purple-500">Interests</h2>
+          <ul>
+              {interests.map((interest) => <li>{interest}</li>)}
+          </ul>
+      </div>
+      <div class="category">
+          <h2 class="text-purple-500">Operating Systems and Setup</h2>
+          <ul>
+              {oses.map((os) => <li>{os}</li>)}
+          </ul>
+      </div>
+      <div class="category">
+        <h2 class="text-purple-500">Games I play / Have Finished (Not the full list)</h2>
+        <ul>
+            {games.map((game) => <li>{game}</li>)}
+        </ul>
+    </div>
+  </div>
+  
+
+    <h2 class="text-purple-500">Some of the stuff I built:</h2>
     <Projects />
     <p>This site will update as I add stuff, so keep checking back</p>
     </div>  

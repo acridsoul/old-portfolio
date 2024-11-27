@@ -1,9 +1,6 @@
 ---
-import Body from '../components/Body.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Contacts from "../components/contacts.astro"
 import '../styles/global.css';
-
-const pageTitle = "The Crib";
 ---
 
 <html lang="en">
@@ -12,24 +9,12 @@ const pageTitle = "The Crib";
     <link rel="icon" type="image/ico" href="/logo.ico" />
     <meta name="viewport" content="width=device-width" />
     <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <meta name="generator" content={Astro.generator} >
-    <title>{pageTitle}</title>
   </head>
   <body>
-
-    <!-- Loading Screen -->
-    <!-- <div id="loading-screen">
-      <h1>Wait...</h1> <br>
-      <div class="loader"></div>
-    </div> -->
-
-    <!-- Main content, hidden initially -->
-    <!-- <div id="main-content" style="display: none;"> -->
- 
-      <BaseLayout>
-      </BaseLayout/>
-    </div>
-
+    
+    <Contacts />
     <script>
       // Import external JavaScript (menu.js) for functionality
       import "../scripts/menu.js";
