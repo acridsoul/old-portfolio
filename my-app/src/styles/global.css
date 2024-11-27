@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 
 @font-face {
 font-family: Gothic War;
@@ -22,8 +24,10 @@ src: url('/fonts/Death.ttf') format('truetype');
 
 html {
   background-color: #000000;
-  font-family: DynaPuff;
-  color: #0ae61d;
+  font-family: "Iceland",cursive;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 

@@ -1,21 +1,3 @@
-// Typing effect
-var i = 0;
-var txt = 'I am Acrisoul';
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("acrisoul").textContent += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, 200)
-  } 
-  // else {
-  //   i = 0;
-  //   document.getElementById("acrisoul").textContent = '';
-  //   setTimeout(typeWriter, 200);
-  // }
-}
-typeWriter()
-
 // js code for the clock
 setInterval(myClock, 0);
 function myClock() {
