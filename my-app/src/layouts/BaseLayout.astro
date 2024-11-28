@@ -1,5 +1,6 @@
 ---
 import Body from '../components/Body.astro';
+import Webring from '../components/Webring.astro';
 import '../styles/global.css';
 const pageTitle = "Home Page";
 ---
@@ -13,6 +14,7 @@ const pageTitle = "Home Page";
   </head>
   <body>
     <Body />
+    <Webring />
     <slot />
     <script>
       import "../scripts/menu.js";
