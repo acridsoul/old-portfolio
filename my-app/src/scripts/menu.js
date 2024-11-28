@@ -1,3 +1,4 @@
+// custom cursor
 import { fairyDustCursor } from "cursor-effects";
 
 window.addEventListener("load", () => {
@@ -8,6 +9,16 @@ window.addEventListener("load", () => {
   ); // No element parameter, applies to the whole body
 });
 
+const customCursor = document.querySelector('.custom-cursor');
+
+const moveCursor = (e) => {
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+
+  customCursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+};
+
+window.addEventListener('mousemove', moveCursor);
 
 // js code for the clock
 setInterval(myClock, 0);
@@ -15,15 +26,6 @@ function myClock() {
   const date = new Date();
   document.getElementById("digital-clock").textContent = date.toLocaleTimeString();
 }
-
-
-// Show the main content after 4 seconds and hide the loading screen
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(function() {
-    document.getElementById("loading-screen").style.display = "none";
-    document.getElementById("main-content").style.display = "block";
-  }, 2700); // 4 seconds delay
-});
 
 
 // JavaScript for Project tab
@@ -39,6 +41,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.querySelector('.hamburger').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('expanded');
-});

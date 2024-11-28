@@ -247,5 +247,14 @@ h1 {
 }
 
 
-/* Css for contact page */
+/* Css For Custom cursor */
+
+html, body {
+  cursor: crosshair;
+}
+
+a {
+  cursor: crosshair;
+}
+
 
