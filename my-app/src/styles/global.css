@@ -21,26 +21,26 @@ src: url('/fonts/Death.ttf') format('truetype');
 
 
 body {
-  margin: 0 auto;
-  /* width: 100%; */
-  /* max-width: 80ch; */
+  margin: 0;
   padding: 1rem;
   line-height: 1.5;
   background-color: #000000;
-  height: 100vh;
+  min-height: 100vh; /* Ensure body takes full height */
+  position: relative; /* Required for absolute positioning of pseudo-element */
 }
 
-body::before{
+body::before {
   content: "";
-  position: absolute;
+  position: fixed; /* Change to fixed to cover the entire viewport */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/images/fence.jpg');
+  background-image: url('/images/fence.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%; /* Ensure it covers the full height */
+  width: 100%; /* Ensure it covers the full width */
   filter: brightness(2%);
   z-index: -1;
 }
@@ -76,10 +76,6 @@ p {
   margin-top: -20px;
 }
 
-
-
-
-
 /* ------------------- CSS FOR PROJECT TAB ------------------- */
 
 /* Gothic-themed CSS for file stack */
@@ -90,7 +86,6 @@ p {
   /* background-color: #000000; */
   background: none;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   /* border: 1px solid #070606; */
   border: none;
@@ -160,6 +155,7 @@ p {
 
 .folder.active .content {
   max-height: 500px;
+  background: none;
 }
 
 .folder .content-inner {
@@ -211,15 +207,18 @@ p {
 @media (max-width: 600px) {
   .file-stack {
     max-width: 100%;
+    background: none;
   }
   
   .folder .label {
     padding: 15px;
     font-size: 0.8em;
+    background: none;
   }
   
   .folder .content-inner {
     padding: 15px;
+    background: none;
   }
 }
 
