@@ -18,9 +18,6 @@ src: url('/fonts/Death.ttf') format('truetype');
   src: url('/fonts/digital-7.ttf') format('truetype');
   }
 
-html {
-  background-color: #000000;
-}
 
 
 body {
@@ -29,6 +26,21 @@ body {
   /* max-width: 80ch; */
   padding: 1rem;
   line-height: 1.5;
+}
+
+body::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/fence.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  filter: brightness(2%);
+  z-index: -1;
 }
 
 * {
@@ -43,8 +55,12 @@ img {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+  z-index: 1;
 }
 
+p {
+  z-index: 1;
+}
 
 
 /*----------------------------- Clock Styles -------------------------------*/
