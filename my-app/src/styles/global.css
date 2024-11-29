@@ -26,6 +26,8 @@ body {
   /* max-width: 80ch; */
   padding: 1rem;
   line-height: 1.5;
+  background-color: #000000;
+  height: 100vh;
 }
 
 body::before{
@@ -38,7 +40,7 @@ body::before{
   background: url('/images/fence.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
   filter: brightness(2%);
   z-index: -1;
 }
@@ -75,52 +77,6 @@ p {
 }
 
 
-/*--------------------------- Loading Screen Styles -------------------------*/
-
-
-#loading-screen {
-  position: fixed;
-  width: 100%;
-  height: 100vh; /* Full viewport height */
-  background-color: #000000; /* Black background */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Horizontally center the loader */
-  align-items: center; /* Vertically center the loader */
-  z-index: 9999;
-}
-
-#loading-screen h1 {
-  color: red;
-  font-family:'Mirage' ;
-}
-
-/* Loader Styles */
-/* HTML: <div class="loader"></div> */
-.loader {
-  display: inline-flex;
-  gap: 10px;
-  /* width: 170px; */
-}
-.loader:before,
-.loader:after {
-  content: "";
-  height: 30px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(farthest-side,#000 95%,#0000) 50%/8px 8px no-repeat
-    #fff;
-  aspect-ratio: 1;
-  animation: l10 1.5s infinite alternate;
-}
-.loader:after {
-  --s:-1;
-}
-@keyframes l10 {
-  0% ,20% {transform:scaleX(var(--s,1)) rotate(0deg) ;clip-path:inset(0)}
-  60%,100%{transform:scaleX(var(--s,1)) rotate(30deg);clip-path:inset(40% 0 0)}
-}
 
 
 
@@ -131,11 +87,13 @@ p {
 .file-stack {
   width: 100%;
   max-width: 600px;
-  background-color: #000000;
+  /* background-color: #000000; */
+  background: none;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  border: 1px solid #070606;
+  /* border: 1px solid #070606; */
+  border: none;
 }
 
 .file-stack a {
@@ -154,7 +112,8 @@ p {
 
 .folder .label {
   padding: 20px;
-  background-color: #000000;
+  /* background-color: #000000; */
+  background: none;
   color: #c0c0c0;
   font-weight: 600;
   cursor: pointer;
@@ -167,7 +126,8 @@ p {
 }
 
 .folder .label:hover {
-  background-color: #000000;
+  /* background-color: #000000; */
+ background: none;
   color: #0ae61d;
 }
 
@@ -194,7 +154,8 @@ p {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #000000;
+  /* background-color: #000000; */
+  background: none;
 }
 
 .folder.active .content {
