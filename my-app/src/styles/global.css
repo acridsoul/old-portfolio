@@ -31,7 +31,7 @@ body {
 
 body::before {
   content: "";
-  position: fixed; /* Change to fixed to cover the entire viewport */
+  position: fixed; 
   top: 0;
   left: 0;
   right: 0;
@@ -39,8 +39,8 @@ body::before {
   background-image: url('/images/fence.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%; /* Ensure it covers the full height */
-  width: 100%; /* Ensure it covers the full width */
+  height: 100%; 
+  width: 100%; 
   filter: brightness(2%);
   z-index: -1;
 }
