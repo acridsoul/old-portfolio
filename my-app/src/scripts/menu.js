@@ -9,16 +9,7 @@ window.addEventListener("load", () => {
   ); // No element parameter, applies to the whole body
 });
 
-const customCursor = document.querySelector('.custom-cursor');
 
-const moveCursor = (e) => {
-  const mouseY = e.clientY;
-  const mouseX = e.clientX;
-
-  customCursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-};
-
-window.addEventListener('mousemove', moveCursor);
 
 // js code for the clock
 setInterval(myClock, 0);
