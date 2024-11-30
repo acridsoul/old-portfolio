@@ -18,6 +18,51 @@ src: url('/fonts/Death.ttf') format('truetype');
   src: url('/fonts/digital-7.ttf') format('truetype');
   }
 
+/* Login animation */
+
+#ssh-simulation {
+  white-space: pre-wrap;
+  font-size: 1.5rem;
+  color: red;
+  font-family: 'Digital Clock';
+  align-items: center;
+  text-align: center;
+}
+
+#main-content {
+  display: none;
+  color: white;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.fade-in {
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.green-text {
+  color: green;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+.red-text {
+  color: red;
+  font-weight: bold;
+}
+
 
 
 body {

@@ -15,10 +15,14 @@ const pageTitle = "Home Page";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Body />
-    <Webring />
-    <Badges />
-    <slot />
+    <div id="ssh-simulation"></div>
+    <div id="main-content">
+      <Body />
+      <Webring />
+      <Badges />
+      <slot />
+    </div>
+    
     <script>
       import "../scripts/menu.js";
     </script>
