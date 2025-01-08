@@ -1,0 +1,38 @@
+---
+import aboutData from '../data/about.json';
+---
+
+<style>
+  .about-card {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text for contrast */
+    border: 2px solid #4a4a4a; /* Dark gray border */
+    border-radius: 8px;
+    padding: 20px;
+    font-family: 'Old English Text MT', serif; /* Example gothic font */
+    background-image: url('/images/heart.jpg'); /* Optional background texture */
+    background-size: cover;
+  }
+  .about-card h2 {
+    margin-top: 0;
+    color: #d4af37; /* Gold color for headings */
+  }
+  .about-card p {
+    margin: 10px 0;
+  }
+  .about-card p strong {
+    color: #c0c0c0; /* Lighter gray for labels */
+  }
+  .about-card:hover {
+    border-color: #d4af37; /* Gold border on hover */
+    transition: border-color 0.3s ease;
+  }
+</style>
+
+<div class="about-card">
+  <h2>{aboutData.name}</h2>
+  <p>{aboutData.bio}</p>
+  <p><strong>Location:</strong> {aboutData.location}</p>
+  <p><strong>Profession:</strong> {aboutData.profession}</p>
+  <p><strong>Contact:</strong> {aboutData.contact}</p>
+</div>
