@@ -24,8 +24,8 @@ body {
   padding: 1rem;
   line-height: 1.5;
   background-color: #000000;
-  min-height: 100vh; /* Ensure body takes full height */
-  position: relative; /* Required for absolute positioning of pseudo-element */
+  min-height: 100vh; 
+  position: relative; 
 }
 
 body::before {
