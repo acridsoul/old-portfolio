@@ -18,52 +18,6 @@ src: url('/fonts/Death.ttf') format('truetype');
   src: url('/fonts/digital-7.ttf') format('truetype');
   }
 
-/* Login animation */
-
-#ssh-simulation {
-  white-space: pre-wrap;
-  font-size: 1.5rem;
-  color: red;
-  font-family: 'Digital Clock';
-  align-items: center;
-  text-align: center;
-}
-
-#main-content {
-  display: none;
-  color: white;
-  text-align: center;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.fade-in {
-  animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-.green-text {
-  color: green;
-  font-weight: bold;
-  animation: blink 1s infinite;
-}
-
-.red-text {
-  color: red;
-  font-weight: bold;
-}
-
-
 
 body {
   margin: 0;
@@ -72,23 +26,19 @@ body {
   background-color: #000000;
   min-height: 100vh; /* Ensure body takes full height */
   position: relative; /* Required for absolute positioning of pseudo-element */
-  background-image: url('/images/goth-1.png');
 }
 
 body::before {
-  content: "";
-  position: fixed; 
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/images/goth-1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%; 
-  width: 100%; 
-  filter: brightness(2%);
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
   z-index: -1;
+  background-image: url('/images/goth-1.png');
+  opacity: 0.5;
 }
 
 * {
