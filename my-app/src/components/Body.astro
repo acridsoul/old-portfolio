@@ -1,36 +1,54 @@
-<div class="flex justify-center items-center min-h-screen w-full px-4 py-8 text-center text-white font-iceland bg-cover bg-no-repeat bg-center relative">
-    <div class="space-y-4">
-        <div class="p-4">
-            <p class=" text-white hover:text-shadow-glow transition duration-200 text-base sm:text-xl md:text-3xl lg:text-3xl xl:text-3xl">
+<div class="min-h-screen w-full px-4 py-8 text-center text-white font-iceland bg-cover bg-no-repeat bg-center relative">
+    <div class="space-y-4 flex flex-wrap justify-center gap-8">
+        <!-- part 1 -->
+        <div class="flex-1 min-w-[45%] p-4 place-items-start grid text-wrap">
+            <p class="text-white hover:text-shadow-glow transition duration-200 text-base sm:text-xl md:text-3xl lg:text-3xl xl:text-3xl">
                 Hola, soy <span class="text-purple-600">Vcrid11</span>. Este es mi escape de este mundo
                 <span class="text-purple-600">contaminado</span><br>
                 Me gusta <span class="text-purple-600">expresarme</span> y este es mi <span class="text-purple-600">arte</span>. <br>
                 Me gusta <span class="text-purple-600">Linux</span>, navegando por la web, y 
-                <span class="text-purple-600">aprendiedo</span> cosas nuevas. <br><br>
-                Más sobre mí y cosas que hago a continuación.
+                <span class="text-purple-600">aprendiedo</span> cosas nuevas.
             </p>
         </div>
-        
-        <a href="/about">
-            <img src="/images/about.png" alt="About Page" class="h-12 mx-auto">
-        </a>
-        
-        <!--------------------- Digital clock ----------------->
-        <h2 class="text-purple-600  text-lg sm:text-xl md:text-2xl lg:text-3xl">Time at my place</h2>
-        <div id="digital-clock"></div>
 
-        <div class="contact-info">
-            <p class="hover:text-shadow-glow transition duration-200 text-base sm:text-xl md:text-3xl lg:text-3xl">
-                Contactame Abajo:
-            </p>
-            <a href="/contact">
-                <img src="/images/contact.png" alt="Contact Page" class="h-11 mx-auto">
+        <!-- part 2 -->
+        <div class="flex-1 min-w-[45%] p-4">
+            <a href="/about">
+                <img src="/images/about.png" alt="About Page" class="h-12 mx-auto">
             </a>
+            <div class="flex-1 min-w-[45%] p-4">
+                <a href="/contact">
+                    <img src="/images/contact.png" alt="Contact Page" class="h-11 mx-auto">
+                </a>
+            </div>
+                <a href="/blog">
+                    <img src="/images/blog.png" alt="Blogs Page" class="w-48 h-28 mx-auto">
+                </a>
         </div>
-        <p class="text-sm sm:text-base md:text-3xl lg:text-3xl">
-            Still trying to settle on a perfect theme for the website, btw. <br>
-            So it's pretty much raw meat. <br><br>
-            I have so many ideas coming. Watch this space :)
-        </p>
+        
+
+        <!-- part 3 -->
+        <div class="flex-1 min-w-[45%] p-4">
+            <h2 class="text-purple-600 text-lg sm:text-xl md:text-2xl lg:text-3xl">Time at my place</h2>
+            <div id="digital-clock"></div>
+        </div>
+
+        <!-- part 4 -->
+       
+
+        <!-- part 5 -->
+        <div class="flex-1 min-w-[45%] p-4">
+            <p class="text-sm sm:text-base md:text-3xl lg:text-3xl">
+                Still trying to settle on a perfect theme for the website, btw. <br>
+                So it's pretty much raw meat. <br><br>
+                I have so many ideas coming. Watch this space :)
+            </p>
+        </div>
     </div>
 </div>
+
+<style>
+    img {
+        height: 50px;
+    }
+</style>
