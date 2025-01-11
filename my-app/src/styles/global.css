@@ -18,13 +18,15 @@ src: url('/fonts/Death.ttf') format('truetype');
   src: url('/fonts/digital-7.ttf') format('truetype');
   }
 
+html {
+  height: 200px;
+}
 
 body {
   margin: 0;
   padding: 1rem;
   line-height: 1.5;
   background-color: #000000;
-  min-height: 100vh; 
   position: relative; 
 }
 
@@ -222,7 +224,7 @@ p {
 /* Css For Custom cursor */
 
 html, body {
-  cursor: crosshair;
+  cursor: url('/images/skltn.png'),auto;
 }
 
 /* Button used to open the chat form - fixed at the bottom of the page */
