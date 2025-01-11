@@ -224,7 +224,7 @@ p {
 /* Css For Custom cursor */
 
 html, body {
-  cursor: url('/images/skltn.png'),auto;
+  cursor: url('/cursors/foot1.png'),auto;
 }
 
 /* Button used to open the chat form - fixed at the bottom of the page */
